@@ -52,18 +52,24 @@ nav a:hover {
 }
 @media (max-width: 640px) {
   header {
-    flex-direction: column;
+    flex-direction: row;
   }
   nav {
     padding: 10px 0px;
   }
 }
 .imagenes-container {
+  align-items: center;
   display: flex;
   height: 100vh;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 50px;
+  margin: auto;
+
+  max-width: 1000px;
+  max-zoom: 1000px;
+  justify-content: center;
 }
 .imagenes-container .imagen img {
   height: 280px;
