@@ -64,16 +64,16 @@ nav a:hover {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 50px;
-  margin-left: 18%;
-  margin-right: 18%;
 }
 .imagenes-container .imagen img {
   height: 280px;
   width: 200px;
   position: relative;
 }
-.imagenes-container .imagen .text{
-  position: absolute;
+.imagenes-container .imagen .text {
+  position: relative;
   color: black;
   text-align: center;
+  bottom: -25px;
+  left: -150px;
 }
