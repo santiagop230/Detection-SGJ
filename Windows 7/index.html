@@ -37,5 +37,22 @@
       alt="Windows 7"
     />
     <p>parrafo</p>
+    <form action="C:\Users\CPE\Documents\GitHub\Detection-SGJ\Windows 7\procesando.php" method="post" enctype="multipart/form-data">
+      <input type="file" id="archivoInput" class="col-md-offset-4 col-md-4" name="nombre" onchange="return validarEXT()">
+      <input type="submit" value="comparar" id="html2">
+      <button onclick="test()"> hola </button>
+  </form>
+  <script>function validarEXT(){
+      let archivoInput =document.getElementById("archivoInput")
+      let archivoRuta = archivoInput.value;
+      let extPermitidas = /(.html|)$/i;
+
+      if(!extPermitidas.exec(archivoRuta)){
+          alert("Asegurate de haber seleccionado un html")
+          archivoInput.value="";
+          return false;
+      }
+  }
+  </script>
   </body>
 </html>
