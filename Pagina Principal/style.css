@@ -9,10 +9,10 @@ body {
 .titulo {
   justify-content: center;
   display: flex;
-  font-size: 50px;
+  font-size: 40px;
 }
 p {
-  font-size: 22px;
+  font-size: 17px;
   font-family: Arial, Helvetica, sans-serif;
   color: #333333;
 }
@@ -58,16 +58,22 @@ nav a:hover {
     padding: 10px 0px;
   }
 }
-.p-windows7 img {
-  margin-left: 100px;
-  margin-right: 100px;
-}
 .imagenes-container {
   display: flex;
   height: 100vh;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-left: 18%;
+  margin-right: 18%;
 }
-.imagenes-container .imagen img{
-  height: 560px;
-  width: 400px;
+.imagenes-container .imagen img {
+  height: 280px;
+  width: 200px;
+  position: relative;
+}
+.imagenes-container .imagen .text{
+  position: absolute;
+  color: black;
+  text-align: center;
 }
