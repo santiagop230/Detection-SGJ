@@ -1,64 +1,73 @@
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    background-color: #ffffff;
-    color: #333333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+}
+.titulo {
+  justify-content: center;
+  display: flex;
+  font-size: 50px;
+}
+p {
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
+}
+.descripcion {
+  margin-left: 270px;
+  margin-right: 270px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+header {
+  display: flex;
+  background-color: #3b3b3b;
+  min-height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px;
+}
+.logo {
+  display: flex;
+}
+.logo img {
+  height: 50px;
+  align-items: center;
+  position: relative;
+  left: 10px;
+  top: 10px;
+  margin-right: 23px;
+}
+nav a {
+  font-weight: 700;
+  padding-right: 20px;
+}
+nav a:hover {
+  color: yellowgreen;
+}
+@media (max-width: 640px) {
+  header {
+    flex-direction: column;
   }
-  .titulo {
-    justify-content: center;
-    display: flex;
-    font-size: 50px;
-  }
-  p {
-    font-size: 22px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333333;
-  }
-  .descripcion {
-    margin-left: 270px;
-    margin-right: 270px;
-  }
-  a {
-    text-decoration: none;
-    color: white;
-}
-header{
-    display: flex;
-    background-color: #3B3B3B;
-    min-height: 70px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 7px;
-}
-.logo{
-    display: flex;
-    
-}
-.logo img{
-    height: 50px;
-    align-items: center;
-    position: relative;
-    left: 10px;
-    top: 10px;
-    margin-right: 23px;
-}
-nav a{
-    font-weight: 700;
-    padding-right: 20px;
-}
-nav a:hover{
-    color: yellowgreen;
-}
-@media (max-width: 640px){
-   header{flex-direction: column;
-}
-nav{
+  nav {
     padding: 10px 0px;
+  }
 }
+.p-windows7 img {
+  margin-left: 100px;
+  margin-right: 100px;
 }
-.p-windows7 img{
-    margin-left: 100px;
-    margin-right: 100px;
+.imagenes-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+}
+.imagenes-container .imagen img{
+  height: 560px;
+  width: 400px;
 }
