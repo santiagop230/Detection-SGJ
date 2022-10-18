@@ -9,15 +9,20 @@ body {
 .titulo {
   justify-content: center;
   display: flex;
-  font-size: 40px;
+  font-size: 60px;
 }
 p {
-  font-size: 17px;
+  font-size: 19px;
   font-family: Arial, Helvetica, sans-serif;
   color: #333333;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 930px;
+  justify-content: left;
+  display: flex;
 }
 .descripcion {
-  margin-left: 270px;
+  margin-left: 70px;
   margin-right: 270px;
 }
 a {
@@ -61,25 +66,37 @@ nav a:hover {
 .imagenes-container {
   align-items: center;
   display: flex;
-  height: 100vh;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 25px;
   margin: auto;
-
   max-width: 1000px;
   max-zoom: 1000px;
   justify-content: center;
 }
 .imagenes-container .imagen img {
-  height: 280px;
-  width: 200px;
+  height: 262px;
+  width: 180px;
   position: relative;
+  border-radius: 100px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease-in-out;
 }
 .imagenes-container .imagen .text {
   position: relative;
   color: black;
   text-align: center;
-  bottom: -25px;
-  left: -150px;
+  bottom: 2px;
+  left: -140px;
+  font-size: 17px;
+}
+.imagenes-container .imagen:hover img {
+  transform: translateY(-10px);
+}
+.white-space{
+  height: 100px;
+  width: 100vh;
 }
