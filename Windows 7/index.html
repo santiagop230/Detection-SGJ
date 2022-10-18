@@ -37,24 +37,10 @@
       alt="Windows 7"
     />
     <p>parrafo</p>
-    <form action="C:\Users\CPE\Documents\GitHub\Detection-SGJ\Windows 7\procesando.php" method="post" enctype="multipart/form-data">
-      <input type="file" id="archivoInput" class="col-md-offset-4 col-md-4" name="nombre" onchange="return validarEXT()">
-      <input type="submit" value="comparar" id="html2">
-      <button onclick="test()"> hola </button>
-    </form>
-    <script>function validarEXT(){
-      let archivoInput =document.getElementById("archivoInput")
-      let archivoRuta = archivoInput.value;
-      let extPermitidas = /(.html|)$/i;
-
-      if(!extPermitidas.exec(archivoRuta)){
-          alert("Asegurate de haber seleccionado un html")
-          archivoInput.value="";
-          return false;
-        }
-      }
-    </script>
-    <figure class="wp-block-table is-style-regular has-small-font-size"><table style="border-width:2px;"><tbody><tr><td>Tarjeta de video</td><td>DirectX 9 con controlador WDDM 1.0 o superior 128 MB</td></tr><tr><td>CPU</td><td>1 GHz</td></tr><tr><td>Pantalla</td><td>800&#215;600 mínimo<br>1024&#215;768 recomendado</td></tr><tr><td>RAM</td><td>1 GB Mínimo<br>2 GB Recomendado</td></tr><tr><td>Almacenamiento</td><td>16 GB</td></tr></tbody></table></figure>
+    <input id="id" type="text" />
+    <button id="add">Añadir</button>
+    <br />
+    <figure class="wp-block-table is-style-regular has-small-font-size"><table id="tbl" style="border-width:2px;"><tbody><tr><td>Tarjeta de video</td><td>DirectX 9 con controlador WDDM 1.0 o superior 128 MB</td></tr><tr><td>CPU</td><td>1 GHz</td></tr><tr><td>Pantalla</td><td>800&#215;600 mínimo<br>1024&#215;768 recomendado</td></tr><tr><td>RAM</td><td>1 GB Mínimo<br>2 GB Recomendado</td></tr><tr><td>Almacenamiento</td><td>16 GB</td></tr></tbody></table></figure>
     <style>
       table, th, td {
       border:1px solid black;
@@ -62,3 +48,29 @@
     </style>
   </body>
 </html>
+<script type="text/javascript">
+  $('#add').click(function() {
+
+let 
+$tbody = $('#tbl > tbody'),
+id = $('#tarjeta').val(),
+cp = $('#cpu').val(),
+ra = $('#ram').val(),
+updated = false;
+
+$tbody.find('tr').each(function(i, val) {
+
+if ($(val).find('td')[0].innerText == id) {
+
+$(val).find('td')[2].innerText++;
+updated = true;
+return false;
+
+}
+}); 
+if (!updated)
+$tbody.append('<tr><td>' + id + '</td><td>' + cp + '</td><td>'+ra+'</td></tr>');
+alert("en caso de que le hubiera quedado algo mal, asi sea el un digito, necesitara recargar la pagina y escribirlos nuevamente")
+});
+//if 
+</script>
