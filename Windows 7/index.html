@@ -63,7 +63,7 @@
   </body>
 </html>
 <script type="text/javascript">
-  $('#add').click(function() {
+    $('#add').click(function() {
 
 let 
 $tbody = $('#tbl > tbody'),
@@ -76,9 +76,9 @@ $tbody.find('tr').each(function(i, val) {
 
 if ($(val).find('td')[0].innerText == id) {
 
-$(val).find('td')[2].innerText++;
-updated = true;
-return false;
+  $(val).find('td')[2].innerText++;
+  updated = true;
+  return false;
 
 }
 }); 
